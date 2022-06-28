@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="ISO-8859-1">
-    <title>Employee Management System</title>
+    <title>cours Management System</title>
     
     <link href="admin/assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
     <link href="admin/assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
@@ -23,9 +23,14 @@
 
 <body>
 <div class="container">
-    <h1>Enregistrement d'un etudiant</h1>
-    <hr>
-    <h2>Save Etudiant</h2>
+    
+   
+    <div class="card">
+        <div class="card-title">
+            <h1>Enregistrement d'un cours</h1>
+            
+            <h2>Save cours</h2>
+        </div>
 
     <form action="#" th:action="@{/saveCours}" th:object="${cours}" method="POST">
         <input type="hidden" th:field="*{id}" />
@@ -37,12 +42,14 @@
 
         </div>
         <input type="text" th:field="*{libelle}" placeholder="le nom du filiere" class="form-control m-4 col-4 mb-4 ">
-        <button type="submit" class="btn btn-success col-2"> Modifier</button>
+        <button type="submit" class="btn btn-success col-3"> Modifier</button>
+        <button type="reset" class="btn btn-info col-3"> Annuler</button>
     </form>
 
-    <hr>
+  
 
     <a th:href="@{/etudiant}">retrour</a>
+    </div>
 </div>
 <!-- jquery vendor -->
 <script src="admin/assets/js/lib/jquery.min.js"></script>

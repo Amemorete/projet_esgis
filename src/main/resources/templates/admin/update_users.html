@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="ISO-8859-1">
-    <title>Employee Management System</title>
+    <title>Admin Management System</title>
     
     <link href="admin/assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
     <link href="admin/assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
@@ -23,9 +23,12 @@
 
 <body>
     <div class="container">
-        <h1>Modification  d'un admin</h1>
-        <hr>
+       
+        <div class="card">
+            <div class="card-title">
+                <h1>Modification  d'un admin</h1>
         <h2>Modifier L'admin</h2>
+            </div>
 
         <form action="#" th:action="@{/updateUsers}" th:object="${users}" method="POST">
             <input type="hidden" th:field="*{id}" />
@@ -50,12 +53,14 @@
             </div>
            
 
-            <button type="submit" class="btn btn-success col-2"> Ajouter</button>
+            <button type="submit" class="btn btn-success col-3"> Modifier</button>
+            <button type="reset" class="btn btn-info col-3"> Annuler</button>
         </form>
 
-        <hr>
+      
 
-        <a th:href="@{/users}">retrour</a>
+        <a th:href="@{/users}" class="btn btn-primary col-2 m-4">retrour</a>
+        </div>
     </div>
     <!-- jquery vendor -->
     <script src="admin/assets/js/lib/jquery.min.js"></script>

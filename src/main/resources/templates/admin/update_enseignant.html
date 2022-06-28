@@ -23,8 +23,10 @@
 
 <body>
     <div class="container">
-        <h1>Modification d'un Enseignant</h1>
-        <hr>
+        
+        <div class="card">
+            <div class="card-title">
+                <h1>Modification d'un Enseignant</h1>
         <h2>Modifier un Enseignant</h2>
 
         <form action="#" th:action="@{/updateEnseignant}" th:object="${enseignant}" method="POST">
@@ -44,18 +46,19 @@
             
             <div class="input-group input-group-default">
                 <input type="text" th:field="*{email}" placeholder="entrer l'email" class="form-control m-4 col-4  ">
-            <input type="text" th:field="*{specialite}" placeholder="specialité" class="form-control m-4 col-4  ">
+            <input type="text" th:field="*{specialite}" placeholder="specialitï¿½" class="form-control m-4 col-4  ">
             <input type="date" th:field="*{dateNaissance}" placeholder="Date de naissance" class="form-control m-4 col-4">
             </div>
            
 
-            <button type="submit" class="btn btn-success col-2"> Ajouter</button>
-            <button type="reset" class="btn btn-info col-2"> Annuler</button>
+            <button type="submit" class="btn btn-success col-3"> Ajouter</button>
+            <button type="reset" class="btn btn-info col-3 m-4"> Annuler</button>
         </form>
 
-        <hr>
+        
 
-        <a th:href="@{/enseignant}">retrour</a>
+        <a th:href="@{/enseignant}" class="btn btn-primary col-3">retrour</a>
+            </div>
     </div>
     <!-- jquery vendor -->
     <script src="admin/assets/js/lib/jquery.min.js"></script>

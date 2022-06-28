@@ -23,9 +23,12 @@
 
 <body>
     <div class="container">
-        <h1>Enregistrement d'un Enseignant</h1>
-        <hr>
+        
+        <div class="card">
+            <div class="card-title">
+                <h1>Enregistrement d'un Enseignant</h1>
         <h2>Save Enseignant</h2>
+            </div>
 
         <form action="#" th:action="@{/saveEnseignant}" th:object="${enseignant}" method="POST">
             <div class="input-group input-group-default">
@@ -52,9 +55,10 @@
             <button type="reset" class="btn btn-info col-2"> Annuler</button>
         </form>
 
-        <hr>
+        
 
         <a th:href="@{/enseignant}">retrour</a>
+        </div>
     </div>
     <!-- jquery vendor -->
     <script src="admin/assets/js/lib/jquery.min.js"></script>

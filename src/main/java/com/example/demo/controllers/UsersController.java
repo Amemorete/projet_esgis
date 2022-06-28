@@ -1,9 +1,8 @@
 package com.example.demo.controllers;
 
-import com.example.demo.entities.Etudiant;
+
 import com.example.demo.entities.Users;
 import com.example.demo.exceptions.Exceptions;
-import com.example.demo.serviceinterface.EtudiantInterface;;
 import com.example.demo.services.UserImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,8 +17,6 @@ import java.util.List;
 @Controller
 public class UsersController {
 
-    @Autowired
-    private EtudiantInterface etudiantInterface;
 
     @Autowired
     private UserImpl userImpl;

@@ -23,9 +23,12 @@
 
 <body>
     <div class="container">
-        <h1>Enregistrement d'un etudiant</h1>
-        <hr>
+        
+        <div class="card">
+            <div class="card-title">
+                <h1>Enregistrement d'un etudiant</h1>
         <h2>Save Etudiant</h2>
+            </div>
 
         <form action="#" th:action="@{/saveEtudiant}" th:object="${etudiant}" method="POST">
             <div class="input-group input-group-default">
@@ -51,9 +54,10 @@
             <button type="submit" class="btn btn-success col-2"> Ajouter</button>
         </form>
 
-        <hr>
+      
 
         <a th:href="@{/etudiant}">retrour</a>
+            </div>
     </div>
     <!-- jquery vendor -->
     <script src="admin/assets/js/lib/jquery.min.js"></script>

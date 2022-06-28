@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,19 +17,17 @@ import java.util.Date;
  */
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString
 public class Examen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
-    @Temporal(TemporalType.DATE)
+    @CreationTimestamp
     @Column(nullable = false)
     private Date dateCreate;
 
-    @Temporal(TemporalType.DATE)
+    @UpdateTimestamp
     @Column(nullable = false)
     private Date dateUpdate;
 
@@ -99,5 +99,32 @@ public class Examen {
 
     public void setCours(Cours cours) {
         this.cours = cours;
+    }
+
+    public Examen() {
+
+    }
+
+    public Examen(Long id, Date dateCreate, Date dateUpdate, Float note, Etudiant etudiant, Enseignant enseignant, Cours cours) {
+        this.id = id;
+        this.dateCreate = dateCreate;
+        this.dateUpdate = dateUpdate;
+        this.note = note;
+        this.etudiant = etudiant;
+        this.enseignant = enseignant;
+        this.cours = cours;
+    }
+
+    @Override
+    public String toString() {
+        return "Examen{" +
+                "id=" + id +
+                ", dateCreate=" + dateCreate +
+                ", dateUpdate=" + dateUpdate +
+                ", note=" + note +
+                ", etudiant=" + etudiant +
+                ", enseignant=" + enseignant +
+                ", cours=" + cours +
+                '}';
     }
 }

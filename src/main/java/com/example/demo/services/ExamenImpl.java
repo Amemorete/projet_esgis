@@ -33,8 +33,6 @@ public class ExamenImpl implements ExamenInterface {
 
     @Override
     public void addNewExamen(Examen examen) throws Exceptions {
-        examen.setDateCreate(new Date());
-        examen.setDateUpdate(new Date());
 
         Examen examen1=examenRepo.save(examen);
 
@@ -59,7 +57,6 @@ public class ExamenImpl implements ExamenInterface {
         if(!isPresent(examen.getId()))
             throw new Exceptions(Exceptions.alertGeneralException("l'identifiant n'esiste pas"));
         Examen examen1=getById(examen.getId());
-        examen1.setDateUpdate(new Date());
         examen1.setNote(examen.getNote());
         examen1.setEtudiant(examen.getEtudiant());
         examen1.setEnseignant(examen.getEnseignant());
