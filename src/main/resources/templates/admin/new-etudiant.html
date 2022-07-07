@@ -35,8 +35,13 @@
                 <input type="text" th:field="*{nom}" placeholder="nom de l'etudiant " class="form-control m-4 col-4  ">
 
                 <input type="text" th:field="*{prenom}" placeholder="prenom l'etudiant" class="form-control m-4 col-4 mb-4 ">
-                <input type="text" th:field="*{sexe}" placeholder="genre" class="form-control m-4 col-4 mb-4 ">
 
+                <select th:field="*{sexe}" id="" class="form-control m-4 col-4  ">
+                    <option value="">genre</option>
+                    <option value="M">Masculin</option>
+                    <option value="F">Feminin</option>
+                </select>
+               
             </div>
             <div  class="input-group input-group-default">
             <input type="text" th:field="*{adresse}" placeholder="l'adresse" class="form-control m-4 col-8 mb-4 ">
